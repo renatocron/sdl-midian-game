@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BA439BF7-98E1-4DC1-BECA-8B5E46BEB14E}</ProjectGuid>
+    <RootNamespace>midian</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\trash\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\trash</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Renato\Legends\Projects_Groups\app sdl\SDL-1.2.14\SDL-1.2.14\include;D:\Renato\Legends\Projects_Groups\app sdl\ftgl-2.1.3~rc5\src;D:\Renato\Legends\Projects_Groups\app sdl\freetype-2.3.12\include;D:\Renato\Legends\Projects_Groups\app clan\ClanLib-2.1.1\Sources\;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Renato\Legends\Projects_Groups\app sdl\path\VS8\VS8\lib;D:\Renato\Legends\Projects_Groups\app sdl\SDL-1.2.14\SDL-1.2.14\VisualC\SDL\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Renato\Legends\Projects_Groups\app sdl\SDL-1.2.14\SDL-1.2.14\include;D:\Renato\Legends\Projects_Groups\app sdl\ftgl-2.1.3~rc5\src;D:\Renato\Legends\Projects_Groups\app sdl\freetype-2.3.12\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Renato\Legends\Projects_Groups\app sdl\path\VS8\VS8\lib;D:\Renato\Legends\Projects_Groups\app sdl\SDL-1.2.14\SDL-1.2.14\VisualC\SDL\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> /NODEFAULTLIB:msvcrt.lib
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>SDLmain.lib;SDL.lib;SDL_image.lib;opengl32.lib;glu32.lib;ftgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(Configuration)\bin\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDLmain.lib;SDL.lib;opengl32.lib;glu32.lib;SDL_image.lib;ftgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(Configuration)\bin\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\appl.cpp" />
+    <ClCompile Include="sources\CEvent.cpp" />
+    <ClCompile Include="sources\CFPS.cpp" />
+    <ClCompile Include="sources\global.cpp" />
+    <ClCompile Include="sources\main.cpp" />
+    <ClCompile Include="sources\main_LoadOpenGl.cpp" />
+    <ClCompile Include="sources\main_LoadSDL.cpp" />
+    <ClCompile Include="sources\MyApplication.cpp" />
+    <ClCompile Include="sources\Render.cpp" />
+    <ClCompile Include="sources\Sprite.cpp" />
+    <ClCompile Include="sources\StatisticsHandler.cpp" />
+    <ClCompile Include="sources\VertexSprite.cpp" />
+    <ClCompile Include="sources\WordStateCandy.cpp" />
+    <ClCompile Include="sources\WordStateCutter.cpp" />
+    <ClCompile Include="sources\WordStateMenu.cpp" />
+    <ClCompile Include="sources\Writter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sources\StatisticsHandler.h" />
+    <ClInclude Include="sources\VertexSprite.h" />
+    <ClInclude Include="sources\wglext.h" />
+    <ClInclude Include="sources\appl.h" />
+    <ClInclude Include="sources\CEvent.h" />
+    <ClInclude Include="sources\CFPS.h" />
+    <ClInclude Include="sources\global.h" />
+    <ClInclude Include="sources\main.h" />
+    <ClInclude Include="sources\MyApplication.h" />
+    <ClInclude Include="sources\Render.h" />
+    <ClInclude Include="sources\Sprite.h" />
+    <ClInclude Include="sources\WordState.h" />
+    <ClInclude Include="sources\WordStateCandy.h" />
+    <ClInclude Include="sources\WordStateCutter.h" />
+    <ClInclude Include="sources\WordStateMenu.h" />
+    <ClInclude Include="sources\Writter.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
